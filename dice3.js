@@ -18,13 +18,12 @@ class Button{
     constructor(){
         this.button = document.createElement("button")
         this.button.onclick = function(){
-            var randomNumberGenerator = new RandomNumberGenerator(1,6)
             randomNumberGenerator.perform()
             this.zufallszahl = randomNumberGenerator.getValue()
-            render(this.zufallszahl)
+            render()
         }
     }
-    
+
     /**
      * @param {string} value
      */
@@ -53,11 +52,10 @@ class TextBlock{
     get textElement(){
         return this.textBlock
     }
-
 }
 
 
-function render(zufallszahl){
+function render(){
     var body = document.getElementsByTagName("body")[0]
     var button1 = document.getElementsByTagName("button")[0]
     if(button1){
@@ -69,10 +67,12 @@ function render(zufallszahl){
     if(textBlock1){
         body.removeChild(textBlock1)
     }
-    textBlock1 = new TextBlock
-    textBlock1.text = `${zufallszahl}`    
+    textBlock1 = new TextBlock()
+    textBlock1.text = `${randomNumberGenerator.getValue()}`    
     body.appendChild(button1.buttonElement)
     body.appendChild(textBlock1.textElement)
 }
 
+
+var randomNumberGenerator = new RandomNumberGenerator(1,6)
 render()
