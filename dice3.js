@@ -17,11 +17,6 @@ class RandomNumberGenerator{
 class Button{ 
     constructor(){
         this.button = document.createElement("button")
-        this.button.onclick = function(){
-            randomNumberGenerator.perform()
-            this.zufallszahl = randomNumberGenerator.getValue()
-            viewModel.render()
-        }
     }
 
     /**
@@ -33,6 +28,15 @@ class Button{
 
     get buttonElement(){
         return this.button
+    }
+
+    
+    
+    /**
+     * @param {(this: GlobalEventHandlers, ev: MouseEvent) => any} myfunction
+     */
+    set onclickFunction(myfunction){
+        this.button.onclick = myfunction.bind(viewModel)
     }
 }
 
@@ -54,8 +58,7 @@ class TextBlock{
     }
 }
 
-class ViewModel{
-    
+class ViewModel{   
     render(){
         var body = document.getElementsByTagName("body")[0]
         var button1 = document.getElementsByTagName("button")[0]
@@ -64,6 +67,10 @@ class ViewModel{
         }
         button1 = new Button()
         button1.buttonText = 'wuerfeln'
+        button1.onclickFunction = function(){
+            randomNumberGenerator.perform()   
+            this.render()
+        }
         var textBlock1 = document.getElementsByTagName("div")[0]
         if(textBlock1){
             body.removeChild(textBlock1)
