@@ -15,7 +15,6 @@ class Button{
     }
 
     
-    
     /**
      * @param {(this: GlobalEventHandlers, ev: MouseEvent) => any} myfunction
      */

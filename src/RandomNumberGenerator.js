@@ -1,3 +1,5 @@
+//  var randomNumberGenerator;
+
 class RandomNumberGenerator{
     constructor(min, max){
         this.min = min
@@ -5,7 +7,7 @@ class RandomNumberGenerator{
     }
 
     perform(){
-        this.value = 1+ Math.floor(Math.random()*(this.max - this.min +1))
+        this.value = this.min + Math.floor(Math.random()*(this.max - this.min +1))
     }
 
     getValue(){

@@ -1,4 +1,7 @@
-class ViewModel{   
+class ViewModel{
+    // constructor(randomNumberGenerator){
+    //     this.randomNumberGenerator = randomNumberGenerator
+    // }
     render(){
         var body = document.getElementsByTagName("body")[0]
         var button1 = document.getElementsByTagName("button")[0]
@@ -21,7 +24,7 @@ class ViewModel{
     onButtonClicked() {
         randomNumberGenerator.perform()
         this.render()
-    }
-    
+    } 
 }
+
 
