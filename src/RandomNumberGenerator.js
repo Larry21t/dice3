@@ -1,5 +1,5 @@
-//  var randomNumberGenerator;
-
+ var randomNumberGenerator;
+ 
 class RandomNumberGenerator{
     constructor(min, max){
         this.min = min

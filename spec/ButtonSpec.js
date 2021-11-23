@@ -4,9 +4,6 @@ describe("Button", function(){
 
     beforeEach(function(){
         button = new Button();
-        viewModel = jasmine.createSpyObj('ViewModel', {
-            onButtonClicked: undefined
-        })
     });
 
     it("muss erstellt werden können", function(){

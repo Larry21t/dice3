@@ -1,24 +1,20 @@
 class ViewModel{
-    // constructor(randomNumberGenerator){
-    //     this.randomNumberGenerator = randomNumberGenerator
-    // }
     render(){
         var body = document.getElementsByTagName("body")[0]
-        var button1 = document.getElementsByTagName("button")[0]
-        if(button1){
-            body.removeChild(button1)
+        var div1 = document.getElementById("div1")
+        if (div1){
+            body.removeChild(div1)
         }
-        button1 = new Button()
+        div1 = document.createElement("div")
+        div1.id = "div1"
+        var button1 = new Button()
         button1.buttonText = 'wuerfeln'
         button1.onclickFunction= this.onButtonClicked.bind(this)
-        var textBlock1 = document.getElementsByTagName("div")[0]
-        if(textBlock1){
-            body.removeChild(textBlock1)
-        }
-        textBlock1 = new TextBlock()
+        var textBlock1 = new TextBlock()
         textBlock1.text = '' + randomNumberGenerator.getValue()  
-        body.appendChild(button1.buttonElement)
-        body.appendChild(textBlock1.textElement)
+        div1.appendChild(button1.buttonElement)
+        div1.appendChild(textBlock1.textElement)
+        body.appendChild(div1)
     }
    
     onButtonClicked() {
