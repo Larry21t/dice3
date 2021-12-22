@@ -1,6 +1,5 @@
 describe("Button", function(){
     var button;
-    var viewModel;
 
     beforeEach(function(){
         button = new Button();

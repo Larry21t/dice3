@@ -8,7 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\Larissa\\Documents\\TKB\\GitRepositories\\dice\\dice3_KlasseButton\\index.html"
+            "file": "c:\\Users\\Larissa\\Documents\\TKB\\Programmieren\\Visual Studio Code TKB\\GitRepositories\\dice\\dice3_KlasseButton\\index.html"
         }
     ]
 }

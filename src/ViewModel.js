@@ -1,3 +1,4 @@
+
 class ViewModel{
     render(){
         var body = document.getElementsByTagName("body")[0]

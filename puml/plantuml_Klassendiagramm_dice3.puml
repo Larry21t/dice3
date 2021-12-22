@@ -1,0 +1,31 @@
+@startuml dice3
+
+class App
+class ViewModel{
+  render()
+  onButtonClicked()
+}
+class Button{
+  constructor()
+  set buttonText()
+  get buttonElement()
+  set onclickFunction()
+}
+class Textblock{
+  constructor()
+  set text()
+  get text()
+  get textElement()
+}
+class RandomNumberGenerator{
+  constructor(min, max)
+  perform()
+  getValue()
+}
+
+App --> ViewModel
+ViewModel --> Button
+ViewModel --> Textblock
+ViewModel --> RandomNumberGenerator
+
+@enduml
