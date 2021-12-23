@@ -9,6 +9,7 @@ class Button{
   constructor()
   set buttonText()
   get buttonElement()
+  set buttonID()
   set onclickFunction()
 }
 class Textblock{
@@ -16,6 +17,7 @@ class Textblock{
   set text()
   get text()
   get textElement()
+  set textID()
 }
 class RandomNumberGenerator{
   constructor(min, max)

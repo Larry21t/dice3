@@ -17,4 +17,11 @@ class TextBlock{
     get textElement(){
         return this.textBlock
     }
+
+    /**
+     * @param {string} value
+     */
+    set textID(value){
+        this.textBlock.id = value
+    }
 }
